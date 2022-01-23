@@ -133,7 +133,7 @@ class Contenedor {
                 prod.id = id
                 prod.price = Number(prod.price)
                 productos[index] = prod
-                await fs.promises.writeFile(this.fileName, JSON.stringify(productos))
+                await fs.promises.writeFile(this.fileName, JSON.stringify(productos, null, 2))
             }  
         } catch (error) {
             console.log(error)   
