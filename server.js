@@ -9,6 +9,7 @@ const PORT = 8080
 app.use(express.json())
 app.use(express.urlencoded({extended: true}))
 app.use(express.static('public'))
+app.use('/bootstrap', express.static('./node_modules/bootstrap/dist'))
 app.use('/api/productos', router)
 
 const server = app.listen(PORT, () => {
